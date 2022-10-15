@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="1000pt"
+   height="287.70001pt"
+   viewBox="0 0 1000 287.70001"
+   id="svg22"
+   sodipodi:docname="yandex_logo_ru.svg"
+   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs26" />
+  <sodipodi:namedview
+     id="namedview24"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="0.55442099"
+     inkscape:cx="611.44872"
+     inkscape:cy="228.16597"
+     inkscape:window-width="1465"
+     inkscape:window-height="807"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg22" />
+  <g
+     enable-background="new"
+     id="g20"
+     transform="matrix(1.4969605,0,0,1.4969605,-248.48007,-248.35544)">
+    <g
+       id="Layer-1"
+       data-name="Слой 1">
+      <clipPath
+         id="cp0">
+        <path
+           transform="matrix(1,0,0,-1,0,524)"
+           d="M 0,524 H 1000 V 0 H 0 Z"
+           id="path2" />
+      </clipPath>
+      <g
+         clip-path="url(#cp0)"
+         id="g17">
+        <path
+           transform="matrix(1,0,0,-1,247.4328,188.2095)"
+           d="m 0,0 h -12.897 c -23.645,0 -36.064,-11.864 -36.064,-29.421 0,-19.931 8.598,-29.184 26.272,-41.048 l 14.568,-9.728 -42.034,-62.401 h -31.288 l 37.736,55.758 c -21.734,15.423 -33.915,30.37 -33.915,55.758 0,31.793 22.212,53.385 64.486,53.385 H 28.899 V -142.598 H 0 Z"
+           fill="#fc3f1d"
+           id="path5" />
+        <path
+           transform="matrix(1,0,0,-1,482.2067,308.504)"
+           d="m 0,0 h -40.124 c 7.881,18.032 10.031,50.538 10.031,71.18 v 3.559 H 0 Z M 28.421,97.042 H -54.454 V 86.839 C -54.454,57.656 -56.365,19.93 -66.396,0 h -8.837 v -49.59 h 26.272 v 27.286 H 14.808 V -49.59 H 41.08 V 0 H 28.421 Z"
+           id="path7" />
+        <path
+           transform="matrix(1,0,0,-1,366.611,258.6783)"
+           d="M 0,0 H -37.975 V 47.216 H -66.396 V -72.129 h 28.421 v 49.826 H 0 V -72.129 H 28.421 V 47.216 H 0 Z"
+           id="path9" />
+        <path
+           transform="matrix(1,0,0,-1,806.5441,231.39261)"
+           d="m 0,0 c 10.986,0 21.734,-3.796 27.466,-7.355 v 23.964 c -5.971,3.322 -16.48,5.694 -30.57,5.694 -36.303,0 -55.171,-25.862 -55.171,-62.163 0,-39.862 18.389,-61.928 56.364,-61.928 13.137,0 22.451,2.373 29.377,7.355 v 23.016 c -7.165,-4.983 -15.763,-8.067 -27.705,-8.067 -20.301,0 -28.659,15.659 -28.659,40.335 C -28.898,-13.287 -18.629,0 0,0"
+           id="path11" />
+        <path
+           transform="matrix(1,0,0,-1,744.4474,211.462)"
+           d="M 0,0 H -28.66 L -68.784,-55.046 V 0 h -28.422 v -119.346 h 28.422 v 58.606 l 42.034,-58.606 H 5.493 l -45.617,64.3 z"
+           id="path13" />
+        <path
+           transform="matrix(1,0,0,-1,599.2355,260.3389)"
+           d="m 0,0 h -39.646 c 0.716,18.981 7.642,28.946 21.256,28.946 C -4.299,28.946 0,17.32 0,2.373 Z m -17.912,51.25 c -34.631,0 -51.11,-26.337 -51.11,-62.401 0,-41.523 20.539,-61.691 56.842,-61.691 18.151,0 31.526,4.746 39.885,10.441 v 23.014 c -8.837,-5.931 -23.644,-11.151 -37.497,-11.151 -20.778,0 -28.66,9.727 -29.854,29.658 h 68.545 v 14.948 c 0,41.522 -18.39,57.182 -46.811,57.182"
+           id="path15" />
+      </g>
+    </g>
+  </g>
+</svg>
