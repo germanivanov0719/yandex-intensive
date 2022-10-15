@@ -15,3 +15,5 @@ Direct links to Homework tasks on GitHub Pages:
 ## License
 
 Making copies of files from this repository and distributing them is not permitted (unless you are a Yandex employee). If you want to get access to all files, feel free to contact me.
+
+theme: midnight
