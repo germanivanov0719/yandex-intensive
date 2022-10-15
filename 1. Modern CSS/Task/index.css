@@ -71,30 +71,41 @@ main {
   align-items: center;
 }
 
-#search-box :nth-child(1) {
+#search-box > :nth-child(1) {
   flex-grow: 1;
   height: 100%;
+  display: flex;
+  border: 0 solid var(--search-color);
+  z-index: 1;
+  box-sizing: border-box;
 }
 
-#search-box :nth-child(1) > * {
-  width: 100%;
+#search-box > :nth-child(1) > input {
   border-radius: calc(var(--search-border-radius) - 2px);
+  flex-grow: 1;
   outline: none;
   border: none;
   height: 100%;
   padding: 0 0.5em;
   font-size: 1.25em;
-  box-sizing: border-box;
 }
 
-#search-box :nth-child(2) {
+#clear {
+  visibility: hidden;
+  position: relative;
+  margin: auto 0;
+  margin-left: calc(-48px * 0.7);
+  height: 70%;
+}
+
+#search-box > :nth-child(2) {
   border: none;
   background-color: var(--search-color);
   border-radius: var(--search-border-radius);
   height: 100%;
 }
 
-#search-box :nth-child(2) > p {
+#search-box > :nth-child(2) > p {
   height: min-content;
   font-size: 1.25em;
   margin: 0 1em;

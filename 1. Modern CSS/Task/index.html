@@ -10,6 +10,8 @@
     <link rel="prefetch" />
     <!-- CSS -->
     <link rel="stylesheet" href="index.css" />
+    <!-- JavaScript -->
+    <script defer src="index.js"></script>
   </head>
   <body>
     <main>
@@ -22,8 +24,11 @@
             src="images/yandex_logo_ru.svg" />
         </div>
         <div id="search-box">
-          <div><input type="text" placeholder="Найдется всё" /></div>
-          <button>
+          <div>
+            <input type="text" placeholder="Найдется всё" id="input"/>
+            <img id="clear" src="images/clear.png"></img>
+          </div>
+          <button onclick="search()">
             <p>Найти</p>
           </button>
         </div>
