@@ -1,6 +1,7 @@
 # Avoid uploading original presentations while the repository is public
 # to avoid any copyright-related issues 
 *.pptx
+*.pdf
 
 # System files
 .DS_Store
