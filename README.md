@@ -8,9 +8,13 @@ Everything is separated into different folder by lectures. Each folder contains 
 
 ## Links
 
-Direct links to Homework tasks on GitHub Pages:
+### Direct links to Homeworks GitHub Pages:
 
 1. [Modern CSS — 404 Page](https://germanivanov0719.github.io/yandex-intensive/1.%20Modern%20CSS/Task/)
+
+#### Links to notes
+
+1. [Modern CSS](1.%20Modern%20CSS/Materials/Notes.md)
 
 ## License
 
