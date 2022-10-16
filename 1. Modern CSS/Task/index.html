@@ -15,24 +15,24 @@
   </head>
   <body>
     <main>
-      <div id="grid">
-        <div id="logo" onclick="window.location = 'https://ya.ru'">
+      <section id="grid">
+        <section id="logo" onclick="window.location = 'https://ya.ru'">
           <img
             width="100"
             height="30"
             alt="Yandex"
             src="images/yandex_logo_ru.svg" />
-        </div>
-        <div id="search-box">
+        </section>
+        <section id="search-box">
           <div>
-            <input type="text" placeholder="Найдется всё" id="input"/>
-            <img id="clear" src="images/clear.png"></img>
+            <input type="text" placeholder="Найдется всё" id="input" />
+            <img id="clear" src="images/clear.png" />
           </div>
           <button onclick="search()">
             <p>Найти</p>
           </button>
-        </div>
-        <div id="error-message">
+        </section>
+        <section id="error-message">
           <h1>Ошибка 404. Нет такой страницы</h1>
           <p>
             Если вы считаете, что страницы нет по нашей вине,
@@ -41,46 +41,45 @@
               напишите нам.
             </a>
           </p>
-        </div>
-
-        <div id="links">
-          <p id="kinopoisk">
+        </section>
+        <ul id="links">
+          <li id="kinopoisk">
             <span></span>
             <a href="https://hd.kinopoisk.ru">Кинопоиск</a>
             — «Нулевой пациент»
-          </p>
-          <p id="plus">
+          </li>
+          <li id="plus">
             <span></span>
             <a href="https://plus.yandex.ru">Плюс</a>
             — подключите свою семью
-          </p>
-          <p id="edadeal">
+          </li>
+          <li id="edadeal">
             <span></span>
             <a href="https://edadeal.ru">Едадил</a>
             — узнайте, где дешевле
-          </p>
-          <p id="music">
+          </li>
+          <li id="music">
             <span></span>
             <a href="https://music.yandex.ru">Музыка</a>
             — подкасты где угодно
-          </p>
-          <p id="market">
+          </li>
+          <li id="market">
             <span></span>
             <a href="https://market.yandex.ru">Маркет</a>
             — смартфоны Xiaomi
-          </p>
-          <p id="praktikum">
+          </li>
+          <li id="praktikum">
             <span></span>
             <a href="https://praktikum.yandex.ru">Практикум</a>
             — учёба с наставником
-          </p>
-          <p id="games">
+          </li>
+          <li id="games">
             <span></span>
             <a href="https://yandex.ru/games">Игры</a>
             — разных жанров
-          </p>
-        </div>
-      </div>
+          </li>
+        </ul>
+      </section>
     </main>
     <footer>
       <a href="https://yandex.ru/company"><p>Компания</p></a>

@@ -91,10 +91,13 @@ main {
   height: 100%;
   padding: 0 0.5em;
   font-size: 1.25em;
+  min-width: 0px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #clear {
-  visibility: visible;
+  visibility: hidden;
   position: relative;
   margin: auto 0;
   margin-left: calc(-48px * 0.7);
@@ -106,13 +109,14 @@ main {
   background-color: var(--search-color);
   border-radius: var(--search-border-radius);
   height: 100%;
-  padding: auto 1em;
+  /* padding: auto 1em; */
 }
 
 #search-box > :nth-child(2) > p {
   height: min-content;
   font-size: 1.25em;
-  margin: 0;
+  margin: auto 1em;
+  box-sizing: border-box;
 }
 
 /* End Search bar */
@@ -127,20 +131,22 @@ main {
 #links {
   grid-row: 3;
   grid-column: 2;
-}
-
-#links {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 1em;
+  gap: 1em 1em;
   height: fit-content;
+  list-style-type: none;
+  padding: 0;
 }
-
+#links > li {
+  margin-bottom: 0.5em;
+}
 span {
   display: inline-block;
   vertical-align: bottom;
   height: 1em;
   width: 1em;
+  margin-right: 0.5em;
   background-size: contain;
 }
 
@@ -215,7 +221,7 @@ footer > * {
 
 @media screen and (min-width: 1080px) {
   body {
-    padding: 0;
+    padding: 1em;
     width: 1080px;
     margin: 0 auto;
   }
