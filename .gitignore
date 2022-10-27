@@ -5,3 +5,6 @@
 
 # System files
 .DS_Store
+
+# Tasks that are git repositories themselves
+'2. Infrastructure — Building/Task'
