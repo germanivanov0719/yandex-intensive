@@ -1,6 +1,6 @@
-import React from 'react';
 import books from './constants/books.json';
 import Layout from './components/Layout/Layout';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const styles = {
   display: 'flex',
@@ -12,14 +12,19 @@ const styles = {
 }
 
 export default function App() {
-  console.log(styles);
   return (
     <>
     <div id='navbar' style={styles}>
       <h1>Магазин</h1>
-      <img src='./constants/cart.svg' alt='shopping cart'/>
+      <img src='./cart.svg' alt='shopping cart'/>
     </div>
-    <Layout books={books} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout books={books} />}>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    
     </>
   );
 }
