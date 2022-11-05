@@ -1,0 +1,16 @@
+.book-card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.count {
+  display: flex;
+  column-gap: 0.5em;
+  align-items: center;
+}
+
+.card-body {
+  padding-right: auto;
+  width: 100%;
+}

@@ -1,30 +1,41 @@
-import books from './constants/books.json';
-import Layout from './components/Layout/Layout';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BookPage from "./components/BookPage/BookPage";
+import Layout from "./components/Layout/Layout";
+import Navbar from "./components/Navbar/Navbar";
+import books from "./constants/books.json";
+import { data } from "./constants/constants";
 
-const styles = {
-  display: 'flex',
-  width: '100vw',
-  backgroundColor: 'black',
-  color: 'white',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-}
 
 export default function App() {
+  const [chosenBook, setChosenBook] = useState(data[0]);
+  const getAllGenres = () => {
+    let allGenres = [];
+    data.forEach((book) => allGenres.push(book.genres));
+    return [...new Set(allGenres)];
+  };
+  const [genres] = useState(getAllGenres());
+  // Sets chosen book
+  const handleChosenBook = (book) => {
+    setChosenBook(book);
+  };
   return (
     <>
-    <div id='navbar' style={styles}>
-      <h1>Магазин</h1>
-      <img src='./cart.svg' alt='shopping cart'/>
-    </div>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout books={books} />}>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-    
+      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Layout
+                books={books}
+                genres={genres}
+                handleChosenBook={handleChosenBook}
+              />
+            }></Route>
+          <Route path="/book" element={<BookPage book={chosenBook} />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
