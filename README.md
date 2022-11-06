@@ -8,9 +8,11 @@ Everything is separated into different folder by lectures. Each folder contains 
 
 ## Links
 
-### Direct links to Homeworks GitHub Pages:
+### Direct links to Homeworks:
 
 1. [Modern CSS — 404 Page](https://germanivanov0719.github.io/yandex-intensive/1.%20Modern%20CSS/Task/)
+2. []()
+3. [React Basics — Book Shop](https://github.com/germanivanov0719/yandex-intensive/tree/main/3.%20React%20Basics/task)
 
 #### Links to notes
 
