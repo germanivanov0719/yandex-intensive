@@ -1,0 +1,32 @@
+.split-info {
+  display: flex;
+  gap: 1em;
+}
+
+.book-preview {
+  width: 50%;
+  padding: 1em;
+  /* box-sizing: border-box; */
+}
+
+.book-preview > p {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+.book-annotation {
+  width: 50%;
+  padding: 1em;
+}
+
+.count {
+  display: flex;
+  column-gap: 0.5em;
+  align-items: center;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

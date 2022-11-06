@@ -24,7 +24,16 @@ export const data = [
       "coverImg": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975l/2767052.jpg",
       "bbeScore": "2993816",
       "bbeVotes": "30516",
-      "price": "5.09"
+      "price": "5.09",
+      "reviews": [
+        {
+          "id": "0",
+          "name": "John",
+          "content": "The best book ever",
+          "rating": "5.00"
+        },
+        { "id": "1", "name": "Ann", "content": "Terrible", "rating": "3.10" }
+      ]
     },
     {
       "bookId": "2.Harry_Potter_and_the_Order_of_the_Phoenix",
@@ -51,7 +60,16 @@ export const data = [
       "coverImg": "98",
       "bbeScore": "['Hogwarts School of Witchcraft and Wizardry (United Kingdom)', 'London, England']",
       "bbeVotes": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546910265l/2.jpg",
-      "price": "2632233"
+      "price": "2632233",
+      "reviews": [
+        {
+          "id": "0",
+          "name": "Sam",
+          "content": "Perfect gift for a kid",
+          "rating": "4.60"
+        },
+        { "id": "1", "name": "Ann", "content": "Boring", "rating": "2.10" }
+      ]
     },
     {
       "bookId": "2657.To_Kill_a_Mockingbird",

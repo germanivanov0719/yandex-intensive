@@ -3,9 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BookPage from "./components/BookPage/BookPage";
 import Layout from "./components/Layout/Layout";
 import Navbar from "./components/Navbar/Navbar";
-import books from "./constants/books.json";
+// import books from "./constants/books.json";
 import { data } from "./constants/constants";
-
 
 export default function App() {
   const [chosenBook, setChosenBook] = useState(data[0]);
@@ -21,14 +20,14 @@ export default function App() {
   };
   return (
     <>
-      <Navbar />
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route
             path="/"
             element={
               <Layout
-                books={books}
+                books={data}
                 genres={genres}
                 handleChosenBook={handleChosenBook}
               />

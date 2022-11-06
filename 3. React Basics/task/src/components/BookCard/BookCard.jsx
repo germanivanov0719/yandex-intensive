@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./BookCard.css";
+import star from "../../constants/star.svg";
 
 export default function BookCard(props) {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(props.book.count || 0);
   const navigate = useNavigate();
   const handleClick = () => {
     props.handleChosenBook(props.book, value);
@@ -18,13 +19,18 @@ export default function BookCard(props) {
   };
 
   return (
-    <div className="book-card">
+    <div className="book-card card">
       <div className="card-body" onClick={handleClick}>
         <h2>{props.book.title}</h2>
-        <ul>
-          <li>{props.book.author}</li>
-          <li>{props.book.genres}</li>
-          <li>{props.book.price || "—"} ₽</li>
+        <ul className="book-info">
+          <li className="text-muted">{props.book.author}</li>
+          <li className="text-muted">{props.book.genres}</li>
+          <li className="text-muted">
+            {props.book.rating}<img className="star" alt="star" src={star} />
+          </li>
+          <li className="bold price">
+            {props.book.price ? props.book.price + " ₽" : "Нет в наличии"}
+          </li>
         </ul>
       </div>
       <div className="count">
@@ -36,7 +42,7 @@ export default function BookCard(props) {
           }}>
           -
         </button>
-        <span>{value}</span>
+        <span className={value ? '' : 'text-muted'}>{value}</span>
         <button
           type="button"
           onClick={() => {
