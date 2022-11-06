@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import icon from "../../cart.svg";
+import icon from "../../constants/cart.svg";
 
 const styles = {
   display: "flex",
@@ -11,8 +11,6 @@ const styles = {
   padding: "0 10px",
   boxSizing: "border-box",
   position: "sticky",
-  // right: "0",
-  // left: "0",
   top: "0",
 };
 

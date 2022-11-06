@@ -13,6 +13,7 @@
   padding: 0;
   width: min-content;
   padding: 1em;
+  height: min-content;
 }
 
 .genre-list > li {

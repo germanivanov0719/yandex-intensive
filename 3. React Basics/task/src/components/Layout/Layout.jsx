@@ -8,15 +8,16 @@ const styleParent = {
 };
 
 export default function Layout(props) {
-  const [genre, setGenre] = useState(props.genres[0]);
+  const [currentGenre, setCurrentGenre] = useState(props.genres[0]);
   return (
     <div style={styleParent} className="content-container">
         <ul className='card genre-list '>
           {props.genres.map((genre) => (
             <li
+            className={currentGenre === genre? 'bold' : '' }
               key={props.genres.indexOf(genre)}
               onClick={() => {
-                setGenre(genre);
+                setCurrentGenre(genre);
               }}>
               {genre}
             </li>
@@ -24,7 +25,7 @@ export default function Layout(props) {
         </ul>
       <ul className="book-list">
         {props.books
-          .filter((book) => book.genres === genre)
+          .filter((book) => book.genres === currentGenre)
           .map((book) => (
             <BookCard
               key={book.bookId}
