@@ -1,0 +1,37 @@
+.book-card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.count {
+  display: flex;
+  column-gap: 0.5em;
+  align-items: center;
+}
+
+.card-body {
+  /* padding-right: auto; */
+  width: 100%;
+}
+
+.book-info {
+  list-style: none;
+  padding-left: 0;
+}
+
+.book-info > li {
+  margin-bottom: 0.5em;
+}
+
+.price {
+  margin-top: 1em;
+  font-size: larger;
+}
+
+p {
+  height: min-content;
+  line-height: normal;
+}

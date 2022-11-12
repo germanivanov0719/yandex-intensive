@@ -1,0 +1,8 @@
+.review {
+  padding: 1em;
+}
+
+.review :nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
