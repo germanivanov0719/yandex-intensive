@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./BookPage.css";
+import star from "../../constants/star.svg";
 import ReviewCard from "../ReviewCard/ReviewCard";
-import star from '../../constants/star.svg';
+import "./BookPage.css";
 
 export default function BookPage(props) {
   const [value, setValue] = useState(props.book.count || 0);
@@ -20,7 +20,8 @@ export default function BookPage(props) {
           <p className="text-muted">{props.book.author}</p>
           <p className="text-muted">{props.book.genres}</p>
           <p className="text-muted">
-            {props.book.rating}<img className="star" alt="star" src={star} />
+            {props.book.rating}
+            <img className="star" alt="star" src={star} />
           </p>
           <div>
             <p className="price bold">
@@ -35,7 +36,7 @@ export default function BookPage(props) {
                 }}>
                 -
               </button>
-              <span className={value ? '' : 'text-muted'}>{value}</span>
+              <span className={value ? "" : "text-muted"}>{value}</span>
               <button
                 type="button"
                 onClick={() => {

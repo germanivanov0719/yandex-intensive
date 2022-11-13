@@ -1,34 +1,30 @@
-import "./Layout.css";
-import BookCard from "../BookCard/BookCard";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
-
-const styleParent = {
-  display: "flex",
-  gap: "2em",
-};
+import BookCard from "../BookCard/BookCard";
+import "./Layout.css";
 
 export default function Layout({ handleChosenBook }) {
   const categories = Object.values(
     useSelector((state) => state.category).entities
   );
   const books = useSelector((state) => state.book).entities;
-  const [currentCategoryId, setCurrentCategoryId] = useState(1);
-  console.log(books);
+  const [currentCategoryId, setCurrentCategoryId] = useState(
+    categories[0] === undefined ? 1 : categories[0].id
+  );
+
   return (
     <div>
       {categories.length > 0 && books !== undefined ? (
-        <div style={styleParent} className="content-container">
+        <div className="content-container display-flex">
           <ul className="card genre-list ">
-            {categories.map((genre) => (
+            {categories.map((category) => (
               <li
-                className={currentCategoryId === genre.id ? "bold" : ""}
-                key={genre.id}
+                className={currentCategoryId === category.id ? "bold" : ""}
+                key={category.id}
                 onClick={() => {
-                  setCurrentCategoryId(genre.id);
+                  setCurrentCategoryId(category.id);
                 }}>
-                {genre.name}
+                {category.name}
               </li>
             ))}
           </ul>
@@ -49,7 +45,7 @@ export default function Layout({ handleChosenBook }) {
           </ul>
         </div>
       ) : (
-        ""
+        <h3 className="text-center">Загрузка…</h3>
       )}
     </div>
   );

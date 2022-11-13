@@ -1,7 +1,7 @@
-const csvToJson = require('convert-csv-to-json');
+const csvToJson = require("convert-csv-to-json");
 
-const fileInputName = 'src/constants/books100.csv';
-const fileOutputName = 'myOutputFile.json';
+const fileInputName = "src/constants/books100.csv";
+const fileOutputName = "myOutputFile.json";
 
 csvToJson.generateJsonFileFromCsv(fileInputName, fileOutputName);
-console.log(csvToJson.parseSubArray('\'', ',').getJsonFromCsv(fileInputName));
+console.log(csvToJson.parseSubArray("'", ",").getJsonFromCsv(fileInputName));

@@ -1,4 +1,4 @@
 export const selectCartModule = (state) => state.cart;
 
-export const selectFilmCount = (state, filmId) =>
-  selectCartModule(state)[filmId];
+export const selectBookCount = (state, bookId) =>
+  selectCartModule(state)[bookId];

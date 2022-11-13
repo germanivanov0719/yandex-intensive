@@ -10,6 +10,9 @@
 
 .genre-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   padding: 0;
   width: min-content;
   padding: 1em;
@@ -23,10 +26,23 @@
 .genre-list > li {
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-bottom: 1em;
 }
 
 .link :hover {
   text-decoration: underline;
   color: red;
+}
+
+.display-flex {
+  display: flex;
+  gap: 1em;
+}
+
+ul {
+  margin: 0;
+}
+
+ul > li {
+  margin: 0;
+  gap: 1em;
 }
