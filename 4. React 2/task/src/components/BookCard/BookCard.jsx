@@ -8,7 +8,7 @@ export default function BookCard(props) {
   const navigate = useNavigate();
   const handleClick = () => {
     props.handleChosenBook(props.book, value);
-    navigate("/book");
+    navigate('/properBook');
   };
 
   const changeCounterValueBy = (step) => {
