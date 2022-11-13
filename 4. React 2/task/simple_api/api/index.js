@@ -3,22 +3,23 @@ const { categories, books, reviews } = require("./mock");
 const { reply, getById } = require("./utils");
 
 router.get("/categories", (req, res, next) => {
+  console.log(categories);
   reply(res, categories);
 });
 
 router.get("/books", (req, res, next) => {
-  const { cinemaId, filmId } = req.query;
+  const { categoryId, bookId } = req.query;
   let result = books;
 
-  if (cinemaId) {
-    const cinema = getById(categories)(cinemaId);
-    if (cinema) {
-      result = cinema.books.map(getById(result));
+  if (categoryId) {
+    const category = getById(categories)(categoryId);
+    if (category) {
+      result = category.books.map(getById(result));
     }
   }
 
-  if (!cinemaId && filmId) {
-    result = getById(result)(filmId);
+  if (!categoryId && bookId) {
+    result = getById(result)(bookId);
   }
   reply(res, result);
 });

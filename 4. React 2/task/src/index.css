@@ -69,9 +69,3 @@ code {
   font-weight: bold;
   margin: 0 0.3em;
 }
-
-h1 :hover,
-h2 :hover {
-  text-decoration: underline;
-  color: red;
-}

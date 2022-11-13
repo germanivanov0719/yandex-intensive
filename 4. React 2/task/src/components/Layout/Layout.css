@@ -16,8 +16,17 @@
   height: min-content;
 }
 
+.genre-list :hover {
+  text-decoration: underline;
+}
+
 .genre-list > li {
   text-overflow: ellipsis;
   white-space: nowrap;
   margin-bottom: 1em;
+}
+
+.link :hover {
+  text-decoration: underline;
+  color: red;
 }
