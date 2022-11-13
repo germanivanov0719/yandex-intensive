@@ -68,3 +68,7 @@ code {
   min-width: 2em;
   text-align: center;
 }
+
+.clickable :hover {
+  text-decoration: underline;
+}

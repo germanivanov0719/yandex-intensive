@@ -19,7 +19,10 @@ export default function Layout({ handleChosenBook }) {
           <ul className="card genre-list ">
             {categories.map((category) => (
               <li
-                className={currentCategoryId === category.id ? "bold" : ""}
+                className={
+                  (currentCategoryId === category.id ? "bold" : "") +
+                  " clickable"
+                }
                 key={category.id}
                 onClick={() => {
                   setCurrentCategoryId(category.id);

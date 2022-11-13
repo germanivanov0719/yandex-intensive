@@ -28,11 +28,6 @@
   white-space: nowrap;
 }
 
-.link :hover {
-  text-decoration: underline;
-  color: red;
-}
-
 .display-flex {
   display: flex;
   gap: 1em;

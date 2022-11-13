@@ -21,7 +21,9 @@ export default function BookCard(props) {
   return (
     <div className="book-card card">
       <div className="card-body" onClick={handleClick}>
-        <h2>{props.book.title}</h2>
+        <div className="clickable">
+          <h2>{props.book.title}</h2>
+        </div>
         <ul className="book-info">
           <li className="text-muted">{props.book.author}</li>
           <li className="text-muted">{props.book.genres}</li>
