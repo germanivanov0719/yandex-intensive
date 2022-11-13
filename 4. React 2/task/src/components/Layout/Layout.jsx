@@ -20,7 +20,7 @@ export default function Layout({ handleChosenBook }) {
             {categories.map((category) => (
               <li
                 className={
-                  (currentCategoryId === category.id ? "bold" : "") +
+                  (currentCategoryId === category.id ? "bold" : "text-muted") +
                   " clickable"
                 }
                 key={category.id}
