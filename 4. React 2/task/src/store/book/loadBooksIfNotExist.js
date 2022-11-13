@@ -2,16 +2,16 @@ import { bookSlice } from "./index";
 import { prepareData } from "../utils";
 import { selectCinemas } from "./selectors";
 
-export const loadCategoriesIfNotExist = (cinemaId) => (dispatch, getState) => {
+export const loadBooksIfNotExist = (dispatch, getState) => {
   // if (selectCinemas(getState())?.length > 0) {
   //   return;
   // }
 
   dispatch(bookSlice.actions.startLoading());
-  fetch(`http://localhost:3001/api/books?categoryId=${cinemaId}`)
+  fetch("http://localhost:3001/api/books")
     .then((response) => response.json())
-    .then((cinemas) => {
-      dispatch(bookSlice.actions.successLoading(prepareData(cinemas)));
+    .then((books) => {
+      dispatch(bookSlice.actions.successLoading(books));
     })
     .catch(() => {
       dispatch(bookSlice.actions.failLoading());

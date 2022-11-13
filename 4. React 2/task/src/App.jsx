@@ -2,15 +2,20 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BookPage from "./pages/BookPage/BookPage";
 import Navbar from "./components/Navbar/Navbar";
-import { Provider, useDispatch } from "react-redux";
-import { store } from "./store";
+import { useDispatch } from "react-redux";
 import HomePage from "./pages/HomePage/HomePage";
 import { data } from "./constants/constants";
 import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 import { loadCategoryIfNotExist } from "./store/category/loadCategoryIfNotExist";
+import { loadBooksIfNotExist } from "./store/book/loadBooksIfNotExist"
 
 export default function App() {
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadBooksIfNotExist);
+    dispatch(loadCategoryIfNotExist);
+  }, []);
+  
   const [chosenBook, setChosenBook] = useState(data[0]);
   const getAllGenres = () => {
     let allGenres = [];
@@ -22,9 +27,6 @@ export default function App() {
   const handleChosenBook = (book) => {
     setChosenBook(book);
   };
-  useEffect(() => {
-    dispatch(loadCategoryIfNotExist());
-  }, []);
   return (
     // <Provider store={store}>
       <BrowserRouter>

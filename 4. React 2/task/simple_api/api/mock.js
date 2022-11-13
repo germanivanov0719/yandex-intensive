@@ -1,6 +1,6 @@
 // Copyright (c) Not me
 
-const normalizedCatalogs = [
+const categories = [
   {
     id: 1,
     name: "Религия",
@@ -18,7 +18,7 @@ const normalizedCatalogs = [
   },
 ];
 
-const normalizedBooks = [
+const books = [
   {
     id: 1,
     title: "Библия С++",
@@ -184,6 +184,6 @@ const normalizedBooks = [
 ];
 
 module.exports = {
-  catalogs: normalizedCatalogs,
-  books: normalizedBooks,
+  categories,
+  books,
 };
