@@ -2,20 +2,14 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import star from "../../constants/star.svg";
 import "./BookCard.css";
+import CountBooks from "../CountBooks/CountBooks";
 
 export default function BookCard(props) {
   const [value, setValue] = useState(props.book.count || 0);
   const navigate = useNavigate();
   const handleClick = () => {
-    props.handleChosenBook(props.book, value);
+    props.handleChosenBook(props.book);
     navigate("/book");
-  };
-
-  const changeCounterValueBy = (step) => {
-    if (value + step >= 0) {
-      props.book.count = value + step;
-      setValue(value + step);
-    }
   };
 
   return (
@@ -34,25 +28,8 @@ export default function BookCard(props) {
           <li className="bold price">
             {props.book.price ? props.book.price + " ₽" : "Нет в наличии"}
           </li>
+          <CountBooks book={props.book} />
         </ul>
-      </div>
-      <div className="count">
-        <button
-          type="button"
-          disabled={value === 0}
-          onClick={() => {
-            changeCounterValueBy(-1);
-          }}>
-          -
-        </button>
-        <span className={value ? "" : "text-muted"}>{value}</span>
-        <button
-          type="button"
-          onClick={() => {
-            changeCounterValueBy(1);
-          }}>
-          +
-        </button>
       </div>
     </div>
   );

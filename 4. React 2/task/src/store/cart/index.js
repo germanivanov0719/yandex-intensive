@@ -4,10 +4,10 @@ export const cartSlice = createSlice({
   name: "slice",
   initialState: {},
   reducers: {
-    addFilm: (state, action) => {
+    addBook: (state, action) => {
       state[action.payload] = (state[action.payload] || 0) + 1;
     },
-    removeFilm: (state, action) => {
+    removeBook: (state, action) => {
       state[action.payload] =
         state[action.payload] === 0 ? 0 : state[action.payload] - 1;
     },
