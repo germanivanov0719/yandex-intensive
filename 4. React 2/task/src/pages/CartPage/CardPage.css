@@ -1,0 +1,42 @@
+.font-weight-bold {
+  font-weight: bold;
+}
+.order-list {
+  height: fit-content;
+  flex-grow: 1;
+}
+
+.item-price {
+  min-width: fit-content;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2em;
+}
+
+.item-price :nth-child(1) {
+  overflow-wrap: nowrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item-price > * {
+  margin: 0.5em 0;
+}
+
+.book-card {
+  box-sizing: border-box;
+}
+
+.buy-button {
+  height: min-content;
+  align-self: center;
+  border: 0;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-left: auto;
+}
+.buy-button > * {
+  margin: 0;
+}

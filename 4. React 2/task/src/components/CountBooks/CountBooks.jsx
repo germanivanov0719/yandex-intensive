@@ -1,17 +1,18 @@
-// import "./BookCard.css";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { addBook, removeBook } from "../../store/cart/index";
+import { cartSlice } from "../../store/cart";
+import { selectBookCount } from "../../store/cart/selectors";
+import "./CountBooks.css";
 
 export default function CountBooks(props) {
-  const [value, setValue] = useState(0);
+  const value =
+    useSelector((state) => selectBookCount(state, props.book.id)) || 0;
   const dispatch = useDispatch();
 
   const changeCounterValueBy = (step) => {
-    if (value + step >= 0) {
-      props.book.count = value + step;
-      setValue(value + step);
-      // dispatch(addBook);
+    if (step > 0) {
+      dispatch(cartSlice.actions.addBook(props.book.id));
+    } else {
+      dispatch(cartSlice.actions.removeBook(props.book.id));
     }
   };
 
@@ -20,7 +21,8 @@ export default function CountBooks(props) {
       <button
         type="button"
         disabled={value === 0}
-        onClick={() => {
+        onClick={(e) => {
+          e.stopPropagation();
           changeCounterValueBy(-1);
         }}>
         -
@@ -28,7 +30,8 @@ export default function CountBooks(props) {
       <span className={value ? "" : "text-muted"}>{value}</span>
       <button
         type="button"
-        onClick={() => {
+        onClick={(e) => {
+          e.stopPropagation();
           changeCounterValueBy(1);
         }}>
         +

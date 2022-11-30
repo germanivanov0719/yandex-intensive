@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 import { loadBooksIfNotExist } from "./store/book/loadBooksIfNotExist";
 import { loadCategoriesIfNotExist } from "./store/category/loadCategoriesIfNotExist";
+import CartPage from "./pages/CartPage/CartPage";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ export default function App() {
           element={<HomePage handleChosenBook={handleChosenBook} />}
         />
         <Route path="/book" element={<BookPage book={chosenBook} />} />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

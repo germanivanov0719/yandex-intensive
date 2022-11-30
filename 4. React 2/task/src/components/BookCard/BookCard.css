@@ -4,6 +4,8 @@
   width: 100%;
   padding: 1em;
   box-sizing: border-box;
+  z-index: 0;
+  position: relative;
 }
 
 .count {
@@ -13,13 +15,14 @@
 }
 
 .card-body {
-  /* padding-right: auto; */
   width: 100%;
 }
 
 .book-info {
   list-style: none;
   padding-left: 0;
+  position: relative;
+  z-index: 0;
 }
 
 .book-info > li {
