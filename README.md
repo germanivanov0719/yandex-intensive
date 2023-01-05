@@ -1,4 +1,8 @@
-# Yandex Intensive
+> **Graduated in December 2022**
+>
+> No changes will be made in the future
+
+# Yandex Intensive — Frontend
 
 Lessons and code from Yandex Intensive course
 
